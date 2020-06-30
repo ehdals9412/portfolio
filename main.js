@@ -54,3 +54,31 @@ document.addEventListener("scroll", () => {
 arrowUp.addEventListener("click", () => {
   scrollIntoView("#home");
 });
+
+// Projects!!
+const workBtnContainer = document.querySelector(".work__categories");
+const projectContainer = document.querySelector(".work__projects");
+const projects = document.querySelectorAll(".project");
+
+workBtnContainer.addEventListener("click", (e) => {
+  // target에 값이 없으면 부모 요소의 filter 값을 가져와서 사용하겠다!
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+
+  // filter값이 null이 아니면 anime-out class를 추가(투명도를 주고 밑으로 내림
+  // 그 다음 300ms 이후에 setTimeout안에 있는 코드가 실행되는 거임
+  // 쉽게 말하면 anime-out이 추가되고 300ms 이후에 함수안의 내용들이 실행됨
+  projectContainer.classList.add("anime-out");
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter === "*" || filter === project.dataset.type) {
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+    });
+    projectContainer.classList.remove("anime-out");
+  }, 300);
+});
