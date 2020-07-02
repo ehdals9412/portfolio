@@ -126,6 +126,10 @@ p {
   font-weight: var(--weight-semi-bold);
 }
 
+.fab.fa-apple {
+  margin-right: 20px;
+}
+
 .navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
@@ -133,11 +137,11 @@ p {
   border-radius: var(--size-border-radius);
   border: 1px solid transparent;
   border-radius: var(--size-border-radius);
+  font-weight: bold;
 }
 
 .navbar__menu__item:hover {
   border-color: var(--color-white);
-  background-color: #1d2634;
 }
 
 .navbar__toggle-btn {
@@ -151,7 +155,7 @@ p {
 
 /* Home */
 #home {
-  background: url("imgs/home-background.png") center/cover no-repeat;
+  background: url("imgs/background.png") center/cover no-repeat;
   padding: 40px;
   padding-top: 120px;
   text-align: center;
