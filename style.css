@@ -107,13 +107,13 @@ p {
   padding: 16px;
   transition: all var(--animation-duration) ease-in-out;
   z-index: 1;
-  background-color: lightblue;
 }
 
 /* 
   navbar이면서 navbar--dark이면 ~
 */
 #navbar.navbar--dark {
+  background-color: #1d2634;
   padding: 16px;
 }
 
@@ -137,7 +137,7 @@ p {
 
 .navbar__menu__item:hover {
   border-color: var(--color-white);
-  background-color: var(--color-dark-pink);
+  background-color: #1d2634;
 }
 
 .navbar__toggle-btn {
@@ -179,11 +179,16 @@ p {
   color: var(--color-white);
 }
 
+.home__contact:hover {
+  background-color: #1d2634;
+}
+
 /* Section common */
 .section {
   padding: 50px;
   text-align: center;
   margin: auto;
+  padding-top: 80px;
 }
 
 .section__container {
@@ -215,7 +220,7 @@ p {
 }
 
 .major__icon:hover i {
-  color: var(--color-pink);
+  color: #1d2634;
   transform: rotate(-30deg) scale(1.1);
 }
 
@@ -320,7 +325,7 @@ p {
 
 .category__btn.selected,
 .category__btn:hover {
-  background-color: var(--color-pink);
+  background-color: #1d2634;
   color: var(--color-white);
 }
 
@@ -467,7 +472,7 @@ p {
 
 /* Contact */
 #contact {
-  background-color: var(--color-pink);
+  background-color: #1d2634;
 }
 
 .contact__title,
@@ -502,7 +507,7 @@ p {
   width: 70px;
   height: 70px;
   font-size: 50px;
-  background-color: var(--color-pink);
+  background-color: #1d2634;
   color: var(--color-white);
   border-radius: 50%;
   z-index: 2;
@@ -518,14 +523,25 @@ p {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
   .navbar__toggle-btn {
     display: block;
+    top: 16px;
+    right: 16px;
   }
 
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    background-color: lightblue;
+    background-color: #1d2634;
   }
 
   .navbar__menu {
@@ -539,16 +555,28 @@ p {
     display: block;
   }
 
+  .section {
+    padding: 16px;
+    padding-top: 40px;
+  }
+
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
 
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
 
   .skillset {
     flex-direction: column;
+  }
+
+  .category__btn {
+    margin: 4px 0;
+    width: 100%;
   }
 
   .project {
@@ -558,5 +586,15 @@ p {
   .testimonial__avatar {
     width: 80px;
     height: 80px;
+  }
+
+  .arrow-up {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
   }
 }
