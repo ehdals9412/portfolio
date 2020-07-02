@@ -67,6 +67,13 @@ workBtnContainer.addEventListener("click", (e) => {
     return;
   }
 
+  // Remove selection previous
+  const active = document.querySelector(".category__btn.selected");
+  active.classList.remove("selected");
+  const target =
+    e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+  target.classList.add("selected");
+
   // filter값이 null이 아니면 anime-out class를 추가(투명도를 주고 밑으로 내림
   // 그 다음 300ms 이후에 setTimeout안에 있는 코드가 실행되는 거임
   // 쉽게 말하면 anime-out이 추가되고 300ms 이후에 함수안의 내용들이 실행됨
