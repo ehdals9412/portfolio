@@ -41,7 +41,7 @@
 
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   cursor: default;
 }
 
@@ -155,7 +155,7 @@ p {
 
 /* Home */
 #home {
-  background: url("imgs/background.png") center/cover no-repeat;
+  background: url('imgs/background.png') center/cover no-repeat;
   padding: 40px;
   padding-top: 120px;
   text-align: center;
@@ -421,7 +421,7 @@ p {
 }
 
 .project__description h3:after {
-  content: "";
+  content: '';
   display: block;
   position: relative;
   left: 50%;
