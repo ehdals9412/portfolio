@@ -1,5 +1,7 @@
 'use strict';
 
+// load Event
+
 // Make navbar transparent when it is on the top
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
